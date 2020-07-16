@@ -26,7 +26,7 @@ export default class TestExpandable extends React.Component {
 
 
         db.transaction(tx => {
-            tx.executeSql("SELECT * FROM test50 WHERE age_max LIKE '2%' OR nom LIKE '%sud%' ", [], (tx, results) => {
+            tx.executeSql("SELECT * FROM test50", [], (tx, results) => {
                 var temp = [];
                 for (let i = 0; i < results.rows.length; ++i) {
                     temp.push(results.rows.item(i));
